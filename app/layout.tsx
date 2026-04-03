@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import WelcomeBubble from "@/components/WelcomeBubble";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "SteepGraph — Tea Discovery",
@@ -30,6 +32,8 @@ export default function RootLayout({
       <body>
         <Nav />
         <main>{children}</main>
+        <WelcomeBubble />
+        <Analytics />
       </body>
     </html>
   );
